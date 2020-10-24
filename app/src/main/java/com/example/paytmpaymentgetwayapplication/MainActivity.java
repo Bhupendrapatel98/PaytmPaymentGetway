@@ -46,7 +46,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     void generateChecsum(String number1) {
+        //for testing
         Service = PaytmPGService.getStagingService();
+        
+        //for production
+        //Service = PaytmPGService.getProductionService();
 
         RetrofitClint.getRetrofit(Constant.CHECKSUM_GENERATE_URL)
                 .create(Api.class)
